@@ -54,8 +54,8 @@ module.exports = function (grunt) {
                     var outputFile = options.outputFile;
                     var appendToOutput = options.appendToOutput;
 
-                    if( outputFolder !== null ) {
-                        outputFile = outputFolder + "/" + filepath + ext;
+                    if( options.outputFolder !== null ) {
+                        outputFile = options.outputFolder + "/" + filepath + options.ext;
                     }
 
                     failed += result.failureCount;
