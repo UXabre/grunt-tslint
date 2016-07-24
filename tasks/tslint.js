@@ -24,6 +24,7 @@ module.exports = function (grunt) {
             configuration: null,
             formatter: "prose",
             outputFile: null,
+            outputFolder: null,
             appendToOutput: false
         });
 
@@ -51,6 +52,10 @@ module.exports = function (grunt) {
                     var outputString = "";
                     var outputFile = options.outputFile;
                     var appendToOutput = options.appendToOutput;
+
+                    if( outputFolder !== null ) {
+                        outputFile = outputFolder + "/" + filepath;
+                    }
 
                     failed += result.failureCount;
 
